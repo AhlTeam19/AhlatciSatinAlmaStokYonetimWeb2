@@ -1,0 +1,266 @@
+﻿<div class="row">
+
+    <div class="col-xxl-9 col-xl-8 col-md-7 order-xl-1 order-xxl-2">
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row mb-2">
+                    <div class="col-sm-4">
+                        <i class="mdi mdi-account-group widget-icon mb-4"></i><span class="font-20" style="margin-left:10px;"> Personel İşlemleri</span>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="text-sm-end">
+                            <button class="btn btn-outline-success btn-sm mt-1" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"> + Yeni Pesonel Ekle</button>
+                        </div>
+                    </div><!-- end col-->
+                </div>
+                <div class="table-responsive">
+
+                    <!-- Table -->
+                    <table class="table table-centered" id="customDatatable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Sıra</th>
+                                <th>Ad Soyad</th>
+                                <th>Şirket</th>
+                                <th>Departman</th>
+                                <th>Telefon</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mehmet Yılmaz</td>
+                                <td>Çorum Gaz</td>
+                                <td>Satın Alma</td>
+                                <td>05355472200</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Nilüfer Çolak</td>
+                                <td>Çorum Gaz</td>
+                                <td>Satın Alma</td>
+                                <td>05355472244</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Yunus Karayol</td>
+                                <td>Metal Rafineri</td>
+                                <td>Satın Alma</td>
+                                <td>05355472222</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--Table End-->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xxl-3 col-xl-4  col-md-5 order-xl-1 order-xxl-2">
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="card-body">
+
+                    <div class="mt-3 text-center">
+                        <img src="~/assets/images/users/avatar-5.jpg" alt="shreyu" class="img-thumbnail avatar-lg rounded-circle">
+                        <h4>Kerem Can Aktürkoğlu</h4>
+                        <button class="btn btn-primary btn-sm mt-1"><i class="uil uil-envelope-add me-1"></i>Düzenle</button>
+
+                    </div>
+
+                    <div class="mt-3">
+                        <hr class="">
+
+                        <p class="mt-3 mb-2"><strong><i class="uil uil-users-alt"></i> Şirket: Çorum Gaz</strong></p>
+                        <p>
+                        <p class="mt-3 mb-1"><strong><i class="uil uil-globe"></i> Departman:</strong></p>
+                        <p>Satın Alma</p>
+
+
+                        <p class="mt-4 mb-1"><strong><i class="uil uil-at"></i> Mail:</strong></p>
+                        <p>denemem@gmail.com</p>
+
+                        <p class="mt-3 mb-1"><strong><i class="uil uil-phone"></i> Telefon:</strong></p>
+                        <p>0555 541 11 94</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Start -->
+    <div class="modal fade" id="addEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Personel Bilgileri</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="modal-body">
+                        <form class="p-2">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Şirket</label>
+                                        <select class="form-select" id="companyOption" onChange="CompanyChange()" style="min-width:180px;">
+                                            <option selected="">Şirket Seç...</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Departman</label>
+                                        <select class="form-select" id="departmentOption" onChange="DepartmentChange()" style="min-width:180px;">
+                                            <option selected="">Departman Seç...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Yetkiler</label>
+                                        <div class="card mb-md-0 mb-3" style="height:38px;">
+                                            <div class="card-body">
+                                                <div class="card-widgets" style="margin-top: -12px;">
+                                                    <a data-bs-toggle="collapse" href="#cardCollpase1" role="button" aria-expanded="false" aria-controls="cardCollpase1" class="collapsed"><i class="mdi mdi-minus"></i></a>
+                                                </div>
+                                                <div id="cardCollpase1" class="pt-3 collapse" style="">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item">
+                                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                            Talep Onay
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                            Teklif Onay
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                                            Stok Yönetim
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="task-title" class="form-label">Rol</label>
+                                        <select class="form-select" id="roleOption" onChange="RoleChange()" style="min-width:180px;">
+                                            <option selected="">Rol Seç...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Ad</label>
+                                        <input type="text" class="form-control form-control-light" id="task-title" placeholder="Enter title">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Soyad</label>
+                                        <input type="text" class="form-control form-control-light" id="task-title" placeholder="Enter title">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Kimlik No</label>
+                                        <input type="text" class="form-control form-control-light" id="task-title" placeholder="Enter title">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Telefon</label>
+                                        <input type="text" class="form-control form-control-light" id="task-title" placeholder="Enter title">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Mail</label>
+                                        <input type="text" class="form-control form-control-light" id="task-title" placeholder="Enter title">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Kullanıcı Adı</label>
+                                        <input type="text" class="form-control form-control-light" id="task-title" placeholder="Enter title">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-2">
+                                        <label for="task-title" class="form-label">Şifre</label>
+                                        <input type="text" class="form-control form-control-light" id="task-title" placeholder="Enter title">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-light" data-bs-dismiss="modal"> Vazgeç</button>
+                    <button type="button" class="btn btn-sm btn-primary" id="addEmployeeButton" onclick="AddEmployee()" disabled>Personel Ekle </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+</div>

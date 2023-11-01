@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Layout - Ahlatcı Teknoloji - Kurumsal Yönetim Sistemi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link href="~/assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/images/favicon.ico" rel="shortcut icon">
+    <link href="~/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" disabled="disabled">
+    <link href="~/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+
+</head>
+
+<body class="loading" data-layout="detached"
+      data-layout-config='{"layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":true, "showRightSidebarOnStart": true}'>
+</body>
+
+<!-- Topbar Start -->
+<div class="navbar-custom topnav-navbar topnav-navbar-dark">
+    <div class="container-fluid">
+
+        <!-- LOGO -->
+        <a href="index.html" class="topnav-logo">
+            <span class="topnav-logo-lg">
+                <img src="~/assets/images/navlogo.png">
+            </span>
+
+        </a>
+
+        <ul class="list-unstyled topbar-menu float-end mb-0">
+
+
+
+            <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="~/assets/images/flags/turkiye.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Türkçe</span> <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu" aria-labelledby="topbar-languagedrop">
+
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="~/assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Deutsch</span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="~/assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">L'Italiano</span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="~/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Español</span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <img src="~/assets/images/flags/england.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                    </a>
+
+                </div>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" id="topbar-notifydrop" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="dripicons-bell noti-icon"></i>
+                    <span class="noti-icon-badge"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg" aria-labelledby="topbar-notifydrop">
+
+                    <!-- item-->
+                    <div class="dropdown-item noti-title">
+                        <h5 class="m-0">
+                            <span class="float-end">
+                                <a href="javascript: void(0);" class="text-dark">
+                                    <small>Temizle</small>
+                                </a>
+                            </span>Bildirimler
+                        </h5>
+                    </div>
+
+                    <div style="max-height: 230px;" data-simplebar="init">
+                        <div class="simplebar-wrapper" style="margin: 0px;">
+                            <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
+                                <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                    <div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;">
+                                        <div class="simplebar-content" style="padding: 0px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                        </div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div>
+                    </div>
+
+                    <!-- All-->
+                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        Hepsini Göster
+                    </a>
+
+                </div>
+            </li>
+
+            <li class="notification-list">
+                <a class="nav-link end-bar-toggle" href="javascript: void(0);">
+                    <i class="dripicons-gear noti-icon"></i>
+                </a>
+            </li>
+
+            <li class="dropdown notification-list">
+                <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" id="topbar-userdrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="account-user-avatar">
+                        <img src="~/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                    </span>
+                    <span>
+                        <span class="account-user-name">Soeng Souy</span>
+                        <span class="account-position">Founder</span>
+                    </span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="topbar-userdrop">
+                    <div class=" dropdown-header noti-title">
+                        <h6 class="text-overflow m-0">Hoşgeldiniz!</h6>
+                    </div>
+
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-account-circle me-1"></i>
+                        <span>Hesabım</span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-account-edit me-1"></i>
+                        <span>Ayarlar</span>
+                    </a>
+
+                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                        <i class="mdi mdi-lifebuoy me-1"></i>
+                        <span>Destek</span>
+                    </a>
+
+                    <a asp-area="" asp-controller="Account" asp-action="Logout" class="dropdown-item notify-item">
+                        <i class="mdi mdi-logout me-1"></i>
+                        <span>Çıkış Yap</span>
+                    </a>
+
+                </div>
+            </li>
+
+        </ul>
+        <a class="button-menu-mobile disable-btn">
+            <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- Topbar End -->
+<!-- Start Content-->
+<div class="container-fluid">
+
+    <!-- Begin page -->
+    <div class="wrapper">
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="leftside-menu leftside-menu-detached">
+
+            <div class="leftbar-user">
+                <a href="javascript: void(0);">
+                    <img src="~/assets/images/users/avatar-2.jpg" alt="user-image" height="42"
+                         class="rounded-circle shadow-sm">
+                    <span class="leftbar-user-name">Blaine Connor</span>
+                </a>
+            </div>
+
+            <!--- Sidemenu -->
+            <ul class="side-nav">
+
+                <li class="side-nav-title side-nav-item">Yönlendirme Paneli</li>
+
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#sidebarDashboards" aria-expanded="false"
+                       aria-controls="sidebarDashboards" class="side-nav-link">
+                        <i class="uil-home-alt"></i>
+                        <span> Ön Panel </span>
+                    </a>
+                    <div class="collapse" id="sidebarDashboards">
+                        <ul class="side-nav-second-level">
+                            <li>
+                                <a href="dashboard-analytics.html">Analizler</a>
+                            </li>
+                            <li>
+                                <a href="dashboard-projects.html">Projeler</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="side-nav-title side-nav-item">Uygulamalar</li>
+
+                <li class="side-nav-item">
+                    <a asp-area="Admin" asp-controller="Home" asp-action="Calender" class="side-nav-link">
+                        <i class="uil-calender"></i>
+                        <span> Takvim </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a href="apps-chat.html" class="side-nav-link">
+                        <i class="uil-comments-alt"></i>
+                        <span> Mesajlaşma </span>
+                    </a>
+                </li>
+
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#sidebarProduct" aria-expanded="false"
+                       aria-controls="sidebarProduct" class="side-nav-link collapsed">
+                        <i class="uil-store"></i>
+                        <span> Depo </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="sidebarProduct">
+                        <ul class="side-nav-second-level">
+                            <li>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="Product">Ürün İşlemleri <span class="badge rounded-pill badge-success-lighten font-10 float-end">New</span></a>
+
+                            </li>
+                            <li>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="Stock">Stok İşlemleri</a>
+                            </li>
+                            <li>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="StockM">Stok Hareketleri</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail"
+                       class="side-nav-link collapsed">
+                        <i class="dripicons-pencil"></i>
+                        <span> Talepler </span>
+                        <span class="badge bg-danger float-center ms-2">4</span>
+                        <span class="menu-arrow"></span>
+
+                    </a>
+                    <div class="collapse" id="sidebarEmail">
+                        <ul class="side-nav-second-level">
+                            <li>
+                                <a href="apps-email-read.html">
+                                    <span class="badge rounded-pill badge-success-lighten font-10 float-end">+4</span>
+                                    Talep Onay
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="RequestCreate">
+                                    Talep Oluştur
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-area="Admin" asp-controller="Home" asp-action="Request">
+                                    Talep Listesi
+                                </a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#sidebarProjects" aria-expanded="false"
+                       aria-controls="sidebarProjects" class="side-nav-link collapsed">
+                        <i class="uil-briefcase"></i>
+                        <span> Teklifler </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="sidebarProjects">
+                        <ul class="side-nav-second-level">
+                            <li>
+                                <a href="apps-projects-list.html">Teklif Gir</a>
+                            </li>
+                            <li>
+                                <a href="apps-projects-details.html">Teklifleri Listele</a>
+                            </li>
+                            <li>
+                                <a href="apps-projects-gantt.html">Mevcut Tedarikçiler</a>
+                            </li>
+                            <li>
+                                <a href="apps-projects-gantt.html">Tedarikçi Ekle</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="side-nav-title side-nav-item">Üyelik İşlemleri</li>
+
+
+                <li class="side-nav-item">
+                    <a asp-area="Admin" asp-controller="Home" asp-action="Employee" class="side-nav-link">
+                        <i class="dripicons-user"></i>
+
+                        <span> Personel İşlemleri </span>
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="clearfix"></div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <div class="content-page">
+            <div class="content">
+                <!-- Sayfa Başlığı -->
+                <!-- Sayfa Başlığı Son -->
+                @RenderBody()
+            </div>
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <script>document.write(new Date().getFullYear())</script> © Kurumsal Yönetim Sistemi -
+                            Ahlatcı Teknoloji
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-md-end footer-links d-none d-md-block">
+                                <a href="javascript: void(0);">Hakkında</a>
+                                <a href="javascript: void(0);">Destek</a>
+                                <a href="javascript: void(0);">İletişime Geç</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+        <!-- content-page -->
+
+    </div> <!-- end wrapper-->
+</div>
+<!-- END Container -->
+<!-- bundle -->
+<script src="~/assets/js/vendor.min.js"></script>
+<script src="~/assets/js/app.min.js"></script>
+
+<!-- third party js -->
+
+<script src="~/assets/js/vendor/jquery.dataTables.min.js"></script>
+<script src="~/assets/js/vendor/dataTables.bootstrap5.js"></script>
+<script src="~/assets/js/vendor/dataTables.responsive.min.js"></script>
+<script src="~/assets/js/vendor/handlebars.min.js"></script>
+<script src="~/assets/js/vendor/typeahead.bundle.min.js"></script>
+<!-- Demo -->
+<script src="~/assets/js/pages/demo.typehead.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+<!-- third party js ends -->
+<!-- demo app -->
+<!-- end demo js-->
+<script>
+    $(document).ready(function () {
+        "use strict";
+        $("#customDatatable").DataTable({
+            language: {
+                paginate: {
+                    previous: "<i class='mdi mdi-chevron-left'>",
+                    next: "<i class='mdi mdi-chevron-right'>"
+                },
+                info: "_TOTAL_ kayıttan _START_ - _END_ arası kayıt gösteriliyor.",
+                search: "Arama:",
+                infoEmpty: "Gösterilecek hiç kayıt yok.",
+                loadingRecords: "Kayıtlar yükleniyor.",
+                infoFiltered: "(Toplam _MAX_ kayıttan filtrelenenler)",
+                zeroRecords: "Tablo boş",
+                lengthMenu: 'Göster <select class=\'form-select form-select-sm ms-1 me-1\'><option value="5">5</option><option value="10">10</option><option value="20">20</option><option value="-1">Tümü</option></select>'
+            },
+            pageLength: 5,
+            select: {
+                style: "multi"
+            },
+            order: [
+                [1, "asc"]
+            ],
+            drawCallback: function () {
+                $(".dataTables_paginate > .pagination").addClass("pagination-rounded"), $("#customDatatable_length label").addClass("form-label")
+            }
+        })
+        $("#categoryDatatable").DataTable({
+            language: {
+                paginate: {
+                    previous: "<i class='mdi mdi-chevron-left'>",
+                    next: "<i class='mdi mdi-chevron-right'>"
+                },
+                info: "_TOTAL_ kayıttan _START_ - _END_ arası kayıt gösteriliyor.",
+                search: "Arama:",
+                infoEmpty: "Gösterilecek hiç kayıt yok.",
+                loadingRecords: "Kayıtlar yükleniyor.",
+                infoFiltered: "(Toplam _MAX_ kayıttan filtrelenenler)",
+                zeroRecords: "Tablo boş",
+                lengthMenu: 'Göster <select class=\'form-select form-select-sm ms-1 me-1\'><option value="5">5</option><option value="10">10</option><option value="20">20</option><option value="-1">Tümü</option></select> Ürün'
+            },
+            pageLength: 5,
+            select: {
+                style: "multi"
+            },
+            order: [
+                [1, "asc"]
+            ],
+            drawCallback: function () {
+                $(".dataTables_paginate > .pagination").addClass("pagination-rounded"), $("#categoryDatatable_length label").addClass("form-label")
+            }
+        })
+    });
+</script>
+
+
+</html>

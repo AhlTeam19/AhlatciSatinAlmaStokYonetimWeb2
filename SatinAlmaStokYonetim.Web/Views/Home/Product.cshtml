@@ -1,0 +1,299 @@
+﻿            <!------------------------------------  Start Content ------------------------------------------>
+<div class="card mt-4">
+    <div class="card-body">
+        <ul class="nav nav-tabs nav-bordered mb-3">
+            <li class="nav-item">
+                <a href="#productPage" data-bs-toggle="tab" aria-expanded="true"
+                   class="nav-link active">
+                    Ürün İşlemleri
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#categoryPage" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
+                    Kategori İşlemleri
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="productPage">
+                <!------------------------------------  Product Start Content ------------------------------------------>
+
+                <div class="row mb-2">
+                    <div class="col-sm-4">
+                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#addProductModal" class="btn btn-primary btn-sm mb-2">
+                            <i class="mdi mdi-plus-circle me-2"></i> Yeni Ürün Ekle
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="text-sm-end">
+                            <button type="button" class="btn btn-success btn-sm mb-2 me-1">
+                                <i class="mdi mdi-cog-outline"></i>
+                            </button>
+                            <button type="button" class="btn btn-light btn-sm mb-2 me-1">Import</button>
+                            <button type="button" class="btn btn-light btn-sm mb-2">Export</button>
+                        </div>
+                    </div><!-- end col-->
+                </div>
+                <div class="table-responsive">
+
+                    <!-- Table -->
+                    <table class="table table-centered" id="products-datatable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Ürün Adı</th>
+                                <th>Kategori</th>
+                                <th>Açıklama</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Çay</td>
+                                <td>Yiyecek / İçecek</td>
+                                <td>2 Kg</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Su</td>
+                                <td>Yiyecek / İçecek</td>
+                                <td>0,5 Litre</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Kahve</td>
+                                <td>Yiyecek / İçecek</td>
+                                <td>1 Kg</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Laptop</td>
+                                <td>Elektronik</td>
+                                <td>i7 İşlemci</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>A4 Fotokopi Kağıdı</td>
+                                <td>Kırtasiye</td>
+                                <td>1 Paket (500)</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--Table End-->
+
+                </div>
+                <!-- Ürün Ekleme modal Start -->
+                <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog"
+                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myLargeModalLabel">Ürün Ekle</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-hidden="true"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row pb-2 justify-content-center">
+                                    <img src="assets/images/null.png" id="productImage"
+                                         class="img-fluid" style="width:180px; height:140px;"
+                                         alt="Product-img">
+                                </div>
+                                <div class="col-auto pt-3">
+                                    <div class="d-flex align-items-center px-2">
+                                        <label class="me-2" style="width:70px;">Kategori</label>
+                                        <select class="form-select" id="categoriyOption"
+                                                onChange="CategoryChange()" style="min-width:180px;">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-auto pt-2 pb-4">
+                                    <div class="d-flex align-items-center px-2">
+                                        <label class="me-2" style="width:70px;">Ürünler</label>
+                                        <select class="form-select" id="productOption"
+                                                onChange="ProductChange()" style="min-width:180px;">
+                                            <option selected="">Ürünü Seç...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-light"
+                                        data-bs-dismiss="modal">
+                                    Vazgeç
+                                </button>
+                                <button type="button" class="btn btn-sm btn-primary"
+                                        id="addProductButton" onclick="AddProduct()" disabled>
+                                    Ürünü
+                                    Ekle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal End -->
+                <!------------------------------------  Product End Content ------------------------------------------>
+            </div>
+            <div class="tab-pane show" id="categoryPage">
+                <!------------------------------------  Category Start Content ------------------------------------------>
+
+                <div class="row mb-2">
+                    <div class="col-sm-4">
+                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#addProductModal" class="btn btn-primary btn-sm mb-2">
+                            <i class="mdi mdi-plus-circle me-2"></i> Yeni Kategori Ekle
+                        </a>
+                    </div>
+                    <div class="col-sm-8">
+                    </div><!-- end col-->
+                </div>
+                <div class="table-responsive">
+
+                    <!-- Table -->
+                    <table class="table table-centered" id="categoryDatatable">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Sıra No</th>
+                                <th>Kategory Adı</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Elektronik</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Yiyecek / İçecek</td>
+                                <td>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(193, 196, 36);"
+                                           class="ms-1 mdi mdi-square-edit-outline"></i>
+                                    </a>
+                                    <a href="javascript:void(0);" class="action-icon">
+                                        <i style="color:rgb(247, 76, 76);"
+                                           class="ms-1 mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--Table End-->
+
+                </div>
+                <!-- Ürün Ekleme modal Start -->
+                <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog"
+                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myLargeModalLabel">Ürün Ekle</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-hidden="true"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row pb-2 justify-content-center">
+                                    <img src="assets/images/null.png" id="productImage"
+                                         class="img-fluid" style="width:180px; height:140px;"
+                                         alt="Product-img">
+                                </div>
+                                <div class="col-auto pt-3">
+                                    <div class="d-flex align-items-center px-2">
+                                        <label class="me-2" style="width:70px;">Kategori</label>
+                                        <select class="form-select" id="categoriyOption"
+                                                onChange="CategoryChange()" style="min-width:180px;">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-auto pt-2 pb-4">
+                                    <div class="d-flex align-items-center px-2">
+                                        <label class="me-2" style="width:70px;">Ürünler</label>
+                                        <select class="form-select" id="productOption"
+                                                onChange="ProductChange()" style="min-width:180px;">
+                                            <option selected="">Ürünü Seç...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-light"
+                                        data-bs-dismiss="modal">
+                                    Vazgeç
+                                </button>
+                                <button type="button" class="btn btn-sm btn-primary"
+                                        id="addProductButton" onclick="AddProduct()" disabled>
+                                    Ürünü
+                                    Ekle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal End -->
+                <!------------------------------------  Category End Content ------------------------------------------>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,122 @@
+﻿@using SatinAlmaStokYonetim.Code;
+<div class="card mt-4">
+    <div class="card-body" style="background-color: #464f5b;">
+        <div class="row">
+            <div class="col-xl-3">
+                <i class="mdi mdi-basket me-1"></i>
+                <span>
+                    <strong>Şirket:</strong>  @Repo.Session.CompanyName
+                </span>
+            </div>
+            <div class="col-xl-5">
+                <i class="mdi mdi-basket me-1"></i>
+                <span>
+                    <strong>Departman:</strong> @Repo.Session.DepartmentName
+                </span>
+            </div>
+            <div class="col-xl-4">
+                <button type="button" class="btn btn-success float-end btn-sm me-2"
+                        data-bs-toggle="modal" data-bs-target="#addProductModal">
+                    <i class="mdi dripicons-plus me-1"></i>
+                    <span>
+                        Ürün Ekle
+                    </span>
+                </button>
+            </div><!-- end col-->
+        </div>
+    </div>
+</div>
+
+<div class="card mt-1">
+    <div class="card-body">
+        <div class="row">
+            <div id="divProductList"></div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-sm btn-primary float-end" data-bs-toggle="modal"
+                data-bs-target="#createRequestModal" onclick="ShortTable()">
+            <i class="mdi dripicons-to-do me-1"></i>Talep
+            Oluştur
+        </button>
+    </div>
+    <!-- Ürün Ekleme modal Start -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Ürün Ekle</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row pb-2 justify-content-center">
+                        <img src="~/assets/images/null.png" id="productImage" class="img-fluid"
+                             style="width:180px; height:140px;" alt="Product-img">
+                    </div>
+                    <div class="col-auto pt-3">
+                        <div class="d-flex align-items-center px-2">
+                            <label class="me-2" style="width:70px;">Kategori</label>
+                            <select class="form-select" id="categoriyOption" onChange="CategoryChange()"
+                                    style="min-width:180px;">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-auto pt-2 pb-4">
+                        <div class="d-flex align-items-center px-2">
+                            <label class="me-2" style="width:70px;">Ürünler</label>
+                            <select class="form-select" id="productOption" onChange="ProductChange()"
+                                    style="min-width:180px;">
+                                <option selected="">Ürünü Seç...</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-light"
+                            data-bs-dismiss="modal">
+                        Vazgeç
+                    </button>
+                    <button type="button" class="btn btn-sm btn-primary" id="addProductButton"
+                            onclick="AddProduct()" disabled>
+                        Ürünü Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal End -->
+    <!-- Onay modal Start -->
+    <div class="modal fade" id="createRequestModal" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Talep Onayla</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-hidden="true"></button>
+                </div>
+                <div class="modal-body">                
+                    <div id="divShortProducts"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-light"
+                            data-bs-dismiss="modal">
+                        Vazgeç
+                    </button>
+                    <button type="button" class="btn  btn-sm btn-primary" id="createRequestButton"
+                            onclick="createRequest()">
+                        Oluştur
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal End -->
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script src="~/js/request.js"></script>
+<script src="~/js/site.js"></script>
